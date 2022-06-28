@@ -1,5 +1,6 @@
 # Gambling
-A mock gambling website im using to learn webdev
+A mock gambling website im using to learn webdev.
+
 Website works on Chrome and Edge.
 No mobile compatability
 
