@@ -2,30 +2,32 @@ let t;
 let tic;
 tic = 0;
 t = 20;
-document.getElementById("output").innerHTML = "you earned " + tic + "$";
+document.getElementById("output").innerHTML = "You earned " + tic + "$";
 let element = document.getElementById("id01");
 element.innerHTML = "Total Money:" + t; 
 const counters = document.querySelectorAll('.counter');
 
-function perform(m, mw, mg, mm)
+function perform(totalmoney, moneywon, moneygamble, moneymax)
 { 
-  if(m >= mg)
+  if(totalmoney >= moneygamble)
   {
-    m = m - mg;
-    mw = Math.floor((Math.random() * mm) + 1);
-    m = mw + m;
-	  document.getElementById("output").innerHTML = "You earned " + mw + "$";
+    totalmoney = totalmoney - moneygamble;
+    console.log(totalmoney);
+    moneywon = Math.floor((Math.random() * moneymax));
+    totalmoney = totalmoney + moneywon;    
+    console.log(totalmoney);
 	  const element = document.getElementById("id01");
-	  element.innerHTML = "Total Money:" + m;
+	  element.innerHTML = "Total Money:" + totalmoney;
+    t = totalmoney;
   }
 
-  
-  var workExperience = document.querySelector(".Money")
+  // Counting animation
+  var Money = document.querySelector(".Money")
 var countOne = 0
 function counterUp(){
-    workExperience.innerHTML = countOne
+    Money.innerHTML = "You earned " + countOne+ "$"
     countOne++
-    if(countOne > workExperience.dataset.textone){
+    if(countOne > moneywon){
 
         clearInterval(stop)
     }
