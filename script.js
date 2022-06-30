@@ -29,9 +29,21 @@ function perform(totalmoney, moneywon, moneygamble, moneymax)
     t = totalmoney;
     if(moneywon > moneygamble)
     {
-      kaching.play();
-    }
+   document.getElementById("output").style.color = "green";
+      
+      setTimeout(function(){
+      document.getElementById("output").style.color = "black";
+    }, 2000);
+      kaching.play();     
+     }
+      
+    
     else{
+        document.getElementById("output").style.color = "red";
+      
+      setTimeout(function(){
+      document.getElementById("output").style.color = "black";
+    }, 2000);
        wah.play();
     }
     
