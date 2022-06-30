@@ -4,6 +4,7 @@ var sfx;
 var kaching = new Audio('kaching.mp3');
 var wah = new Audio('wah.mp3');
 var click = new Audio('click.mp3');
+interval = 50;
 sfx = 1;
 tic = 0;
 t = 20;
@@ -27,6 +28,14 @@ function perform(totalmoney, moneywon, moneygamble, moneymax)
 	  const element = document.getElementById("id01");
 	  element.innerHTML = "Total Money:" + totalmoney;
     t = totalmoney;
+    if (moneywon > 100)
+    {
+      interval = 20;
+    }
+     if (moneywon <= 100)
+    {
+      interval = 50;
+    }
     if(moneywon > moneygamble)
     {
    document.getElementById("output").style.color = "green";
@@ -62,7 +71,7 @@ function counterUp(){
 }
 var stop = setInterval(function(){
     counterUp()
-},50)
+},interval)
   
 }
 
