@@ -28,11 +28,11 @@ function perform(totalmoney, moneywon, moneygamble, moneymax)
 	  const element = document.getElementById("id01");
 	  element.innerHTML = "Total Money:" + totalmoney;
     t = totalmoney;
-    if (moneywon > 100)
+    if (moneywon > 20)
     {
-      interval = 20;
+      interval = 10;
     }
-     if (moneywon <= 100)
+     if (moneywon <= 20)
     {
       interval = 50;
     }
