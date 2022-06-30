@@ -50,7 +50,7 @@ function counterUp(){
 }
 var stop = setInterval(function(){
     counterUp()
-},100)
+},50)
   
 }
 
