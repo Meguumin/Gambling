@@ -21,10 +21,10 @@ function perform(totalmoney, moneywon, moneygamble, moneymax)
   if(totalmoney >= moneygamble)
   {
     totalmoney = totalmoney - moneygamble;
-    console.log(totalmoney);
+   
     moneywon = Math.floor((Math.random() * moneymax));
     totalmoney = totalmoney + moneywon;    
-    console.log(totalmoney);
+    
 	  const element = document.getElementById("id01");
 	  element.innerHTML = "Total Money:" + totalmoney;
     t = totalmoney;
@@ -103,6 +103,33 @@ function sfxstate()
    return;
  }
 }
+
+function double(totalmoney){
+  click.play();
+  var x = document.getElementById("doublenum").value;
+  var y;
+   if(totalmoney >= x)
+  {   
+     y = Math.floor(Math.random() * 2 + 1); 
+    if(y == 1){
+       var Money = document.querySelector(".Money")
+      Money.innerHTML = "you lost " + x + "$"
+       totalmoney =  Number(totalmoney) - Number(x);     
+      wah.play(); 
+    }
+    if(y == 2){
+      var Money = document.querySelector(".Money")
+      Money.innerHTML = "you earned " + x * 2 + "$"
+      totalmoney = Number(totalmoney) + Number(x) * 2;
+      kaching.play(); 
+    }   
+    t = totalmoney;
+    const element = document.getElementById("id01");
+	  element.innerHTML = "Total Money:" + totalmoney;  
+  }
+}
+
+
 
 
 
