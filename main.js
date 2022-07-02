@@ -110,19 +110,21 @@ function double(totalmoney){
   var y;
    if(totalmoney >= x)
   {   
-     y = Math.floor(Math.random() * 2 + 1); 
-    if(y == 1){
-       var Money = document.querySelector(".Money")
-      Money.innerHTML = "you lost " + x + "$"
-       totalmoney =  Number(totalmoney) - Number(x);     
-      wah.play(); 
-    }
-    if(y == 2){
+     y = Math.floor(Math.random() * 6) + 1;
+    
+    if(y == 3){
       var Money = document.querySelector(".Money")
       Money.innerHTML = "you earned " + x * 2 + "$"
       totalmoney = Number(totalmoney) + Number(x) * 2;
       kaching.play(); 
-    }   
+    }
+    else{
+        var Money = document.querySelector(".Money")
+      Money.innerHTML = "you gave up " + x + "$"
+       totalmoney =  Number(totalmoney) - Number(x);     
+      wah.play(); 
+    }
+  
     t = totalmoney;
     const element = document.getElementById("id01");
 	  element.innerHTML = "Total Money:" + totalmoney;  
