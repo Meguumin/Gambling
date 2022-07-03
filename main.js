@@ -110,7 +110,7 @@ function double(totalmoney){
   var y;
    if(totalmoney >= x)
   {   
-     y = Math.floor(Math.random() * 6) + 1;
+     y = Math.floor(Math.random() * 3) + 1;
     
     if(y == 3){
       var Money = document.querySelector(".Money")
