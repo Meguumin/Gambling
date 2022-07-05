@@ -28,14 +28,7 @@ function perform(totalmoney, moneywon, moneygamble, moneymax)
 	  const element = document.getElementById("id01");
 	  element.innerHTML = "Total Money:" + totalmoney;
     t = totalmoney;
-    if (moneywon > 20)
-    {
-      interval = 10;
-    }
-     if (moneywon <= 20)
-    {
-      interval = 50;
-    }
+    
     if(moneywon > moneygamble)
     {
    document.getElementById("output").style.color = "green";
@@ -46,7 +39,6 @@ function perform(totalmoney, moneywon, moneygamble, moneymax)
       kaching.play();     
      }
       
-    
     else{
         document.getElementById("output").style.color = "red";
       
@@ -56,23 +48,22 @@ function perform(totalmoney, moneywon, moneygamble, moneymax)
        wah.play();
     }
     
-  }
+  } 
   
-
-  // Counting animation
-  var Money = document.querySelector(".Money")
-var countOne = 0
-function counterUp(){
-    Money.innerHTML = "You earned " + countOne+ "$"
-    countOne++
-    if(countOne > moneywon){
-        clearInterval(stop)
-    }
+if(moneywon >= moneygamble)
+{
+   var Money = document.querySelector(".Money")
+  Money.innerHTML = "you earned " + moneywon + "$"
 }
-var stop = setInterval(function(){
-    counterUp()
-},interval)
-  
+
+ if(moneywon < moneygamble)
+ {
+   let moneyloss;
+   var Money = document.querySelector(".Money")
+   moneyloss = moneygamble - moneywon;
+  Money.innerHTML = "you gave up " + moneyloss + "$"
+ }
+
 }
 
 
