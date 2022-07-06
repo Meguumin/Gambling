@@ -1,5 +1,5 @@
 # Gambling
-A mock gambling website im using to learn webdev.
+A 🔥Blazingly🔥 Fast Mock gambling website 
 
 Website works on Chrome and Edge.
 firefox layout is off.
