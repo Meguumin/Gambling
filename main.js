@@ -13,6 +13,8 @@ document.getElementById("output").innerHTML = "You earned " + tic + "$";
 const counters = document.querySelectorAll('.counter');
 	let earned = document.Money;
  wah.volume = 0.4;
+
+
 function perform(totalmoney, moneywon, moneygamble, moneymax)
 { 
   
@@ -130,10 +132,19 @@ function Save()
   }
 function get()
   {
-    localStorage.getItem("storedItem")
+    if (localStorage.getItem("storedItem") == null) {
+    t = 20;
+    const element = document.getElementById("id01");
+	  element.innerHTML = "Total Money:" + t;  
+    Save();
+    }
+    else{
+       localStorage.getItem("storedItem")
     t = storedItem;
     const element = document.getElementById("id01");
 	  element.innerHTML = "Total Money:" + storedItem;  
+    }
+   
   }
 function Reset()
   {
