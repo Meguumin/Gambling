@@ -4,19 +4,18 @@ var sfx;
 var kaching = new Audio('kaching.mp3');
 var wah = new Audio('wah.mp3');
 var click = new Audio('click.mp3');
+var storedItem = localStorage.getItem("storedItem");
 interval = 50;
 sfx = 1;
 tic = 0;
 t = 20;
 document.getElementById("output").innerHTML = "You earned " + tic + "$";
-let element = document.getElementById("id01");
-element.innerHTML = "Total Money:" + t; 
 const counters = document.querySelectorAll('.counter');
 	let earned = document.Money;
  wah.volume = 0.4;
 function perform(totalmoney, moneywon, moneygamble, moneymax)
 { 
- 
+  
   click.play();
   if(totalmoney >= moneygamble)
   {
@@ -56,14 +55,14 @@ if(moneywon >= moneygamble)
   Money.innerHTML = "you earned " + moneywon + "$"
 }
 
- if(moneywon < moneygamble)
+ if(moneywon < moneygamble && totalmoney >= moneygamble)
  {
    let moneyloss;
    var Money = document.querySelector(".Money")
    moneyloss = moneygamble - moneywon;
   Money.innerHTML = "you gave up " + moneyloss + "$"
  }
-
+Save();
 }
 
 
@@ -96,12 +95,13 @@ function sfxstate()
 }
 
 function double(totalmoney){
+  Save();
   click.play();
   var x = document.getElementById("doublenum").value;
   var y;
    if(totalmoney >= x)
   {   
-     y = Math.floor(Math.random() * 3) + 1;
+     y = Math.floor(Math.random() * 4) + 1;
     
     if(y == 3){
       var Money = document.querySelector(".Money")
@@ -122,8 +122,27 @@ function double(totalmoney){
   }
 }
 
-
-
+function Save()
+  {
+    click.play();
+    var money = t;
+    localStorage.setItem("storedItem", money)
+  }
+function get()
+  {
+    localStorage.getItem("storedItem")
+    t = storedItem;
+    const element = document.getElementById("id01");
+	  element.innerHTML = "Total Money:" + storedItem;  
+  }
+function Reset()
+  {
+    click.play();
+    t = 20;
+    const element = document.getElementById("id01");
+	  element.innerHTML = "Total Money:" + t;  
+    Save();
+  }
 
 
    

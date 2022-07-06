@@ -11,13 +11,13 @@
 
 </head>
 <body>
-  
+  <body onload="get()">
   <button onclick="ChangeTheme()" class="theme" type="button" style="position: relative; left: -11px top: -9px;">Theme</button>
   
    <button onclick="sfxstate();" class="theme" type="button" style="position: relative; left: -11px top: -9px;">Toggle Sfx</button>
-  
+     <button onclick="Reset();" class="theme" type="button" style="position: relative; left: -11px top: -9px;">Reset Money</button>
 	<div class="flex-container" style="">
-   	<h1 id="id01" style="margin-left: 700px; position: relative; left: 59px; top: -3px;">Total Money:<p class="currentMoney">20</p></h1>
+   	<h1 id="id01" style="margin-left: 700px; position: relative; left: 59px; top: -3px;">Total Money:</h1>
     
    <h3 id="output" class="Money" style="margin-left: 800px; position: relative; left: 23px; top: -26px; transition: none 0s ease 0s; cursor: move;" data-selected="true" data-label-id="0" ></h3> 	     
     	

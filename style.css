@@ -69,12 +69,22 @@ h1 {
   width: 10%;
 }
 
-.theme:hover,
-.theme:focus {
-  opacity: .75;
+
+.theme:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
-
-
+.theme:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 
 
