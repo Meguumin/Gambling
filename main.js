@@ -97,7 +97,7 @@ function sfxstate()
 }
 
 function double(totalmoney){
-  Save();
+  
   click.play();
   var x = document.getElementById("doublenum").value;
   var y;
@@ -122,6 +122,7 @@ function double(totalmoney){
     const element = document.getElementById("id01");
 	  element.innerHTML = "Total Money:" + totalmoney;  
   }
+  Save();
 }
 
 function Save()
