@@ -1,4 +1,4 @@
-# 🎰 Gambling Game
+# 🎰 Aidens Gambling Game
 A 🔥Blazingly🔥 Fast Mock gambling website 
 
 
