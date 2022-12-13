@@ -5,8 +5,11 @@ A 🔥Blazingly🔥 Fast Mock gambling website
 
 ## Features
 -💰 Waste your money for a chance to win big!
+
 -🎉 Win big! or lose
+
 -🎲 Enjoy a sleek and intuitive interface
+
 -💪 Take on the challenges of debt!
 
 ## Getting Started
