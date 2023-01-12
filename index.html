@@ -8,17 +8,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="style.css">
-
+	
 </head>
 <body>
   <body onload="get()">
   <button onclick="ChangeTheme()" class="theme" type="button" style="position: relative; left: -11px top: -9px;">Theme</button>
   
    <button onclick="sfxstate();" class="theme" type="button" style="position: relative; left: -11px top: -9px;">Toggle Sfx</button>
-     <button onclick="Reset();" class="theme" type="button" style="position: relative; left: -11px top: -9px;">Reset Money</button>
+    <button onclick="Reset();" class="theme" type="button" style="position: relative; left: -11px top: -9px;">Reset Money</button>
+    <br>
+    <br>
+    <button  onclick="window.location.href='Leaderboardpage.html';" class="theme" type="button" style="position: relative; left: -11px top: -9px;">Leaderboard</button>
+    <button  onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="theme" type="button" style="position: relative; left: -11px top: -9px;">Cashout 🤑</button>
+  <input type="text" id="username" placeholder="Enter your username">
+  <button onclick="SaveUsername();" id="submitButton">Submit</button>
+   
 	<div class="flex-container" style="">
-   	<h1 id="id01" style="margin-left: 700px; position: relative; left: 59px; top: -3px;">Total Money:</h1>
-    
+   	<h1 id="id01" style="margin-left: 700px; position: relative; left: 59px; top: -3px;">Total Money:</h1>   
    <h3 id="output" class="Money" style="margin-left: 800px; position: relative; left: 23px; top: -26px; transition: none 0s ease 0s; cursor: move;" data-selected="true" data-label-id="0" ></h3> 	     
     	
   	<button onclick="perform(t, 0, 5, 11); " style="margin-left: 800px; left: -40px; top: 127px; position: relative;" class="button" type="button">Gamble(5$)</button>
@@ -29,14 +35,15 @@
   	<button onclick="perform(t, 0, 100, 200);" style="margin-left: 800px; left: 211px; top: 85px; position: relative;" class="button" type="button">Gamble(100$)
     </button>
     <h1 id="id01" style="position: relative; left: 733px; top: 73px;">Double or nothing</h1>
-
    <input type="number" id="doublenum" value="" style="position: relative; left: 734px; top: 65px;">
-    
    <button onclick="double(t)" class="button" type="button" style="left: 1011px; top: 37px; position: relative;">Gamble It</button>
+    
 
 
   
  <!-- i have no idea why it breaks when i put it in a headerfile-->
 	<script src="main.js"></script>
+  <script src="leaderboard.js"></script>
+  
 </body>
 </html>

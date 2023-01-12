@@ -62,7 +62,7 @@ if(moneywon >= moneygamble)
    let moneyloss;
    var Money = document.querySelector(".Money")
    moneyloss = moneygamble - moneywon;
-  Money.innerHTML = "you gave up " + moneyloss + "$"
+  Money.innerHTML = "you lost " + moneyloss + "$"
  }
 Save();
 }
@@ -150,11 +150,9 @@ function get()
 function Reset()
   {
     click.play();
-    t = 20;
+    t = 2000;
     const element = document.getElementById("id01");
 	  element.innerHTML = "Total Money:" + t;  
     Save();
   }
 
-
-   
